@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "tsx watch src/index.ts",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "test": "vitest"
   },
   "dependencies": {
     "@hono/node-server": "^1.13.7",
@@ -31,6 +32,7 @@
     "drizzle-kit": "^0.28.1",
     "eslint": "^9.15.0",
     "eslint-plugin-format": "^0.1.2",
-    "tsx": "^4.7.1"
+    "tsx": "^4.7.1",
+    "vitest": "^2.1.8"
   }
 }

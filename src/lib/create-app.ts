@@ -3,7 +3,7 @@ import { PinoLogger, pinoLogger } from "hono-pino";
 import { requestId } from "hono/request-id";
 import { notFound, onError, serveEmojiFavicon } from "stoker/middlewares";
 import AppEnv from "@/env.js";
-import type { AppBindings } from "./types.js";
+import type { AppBindings, AppOpenAPI } from "./types.js";
 import defaultHook from "stoker/openapi/default-hook";
 
 const isProduction = process.env.NODE_ENV === 'production';
@@ -40,5 +40,12 @@ const createApp = () => {
   return app;
 }
 
+export const createTestApp = (router: AppOpenAPI) => {
+  const testApp = createApp();
+
+  testApp.route("/", router);
+
+  return testApp;
+}
 
 export default createApp;
