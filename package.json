@@ -13,16 +13,22 @@
     "@scalar/hono-api-reference": "^0.5.162",
     "dotenv": "^16.4.5",
     "dotenv-expand": "^12.0.1",
+    "drizzle-orm": "^0.36.4",
+    "drizzle-zod": "^0.5.1",
     "hono": "^4.6.12",
     "hono-pino": "^0.7.0",
+    "pg": "^8.13.1",
     "pino": "^9.5.0",
     "pino-pretty": "^13.0.0",
+    "postgres": "^3.4.5",
     "stoker": "^1.4.2",
     "zod": "^3.23.8"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^3.11.2",
     "@types/node": "^20.11.17",
+    "@types/pg": "^8.11.10",
+    "drizzle-kit": "^0.28.1",
     "eslint": "^9.15.0",
     "eslint-plugin-format": "^0.1.2",
     "tsx": "^4.7.1"
