@@ -11,7 +11,7 @@ import IdParamsSchema from "stoker/openapi/schemas/id-params";
 const tags = ["Tasks"];
 
 export const list = createRoute({
-  path: "/tasks",
+  path: "/",
   method: "get",
   tags,
   responses: {
@@ -23,7 +23,7 @@ export const list = createRoute({
 });
 
 export const getOne = createRoute({
-  path: "/tasks/{id}",
+  path: "/{id}",
   method: "get",
   request: {
     params: IdParamsSchema,
@@ -46,7 +46,7 @@ export const getOne = createRoute({
 });
 
 export const create = createRoute({
-  path: "/tasks",
+  path: "/",
   method: "post",
   tags,
   request: {
@@ -68,7 +68,7 @@ export const create = createRoute({
 });
 
 export const patch = createRoute({
-  path: "/tasks/{id}",
+  path: "/{id}",
   method: "patch",
   request: {
     params: IdParamsSchema,
@@ -96,7 +96,7 @@ export const patch = createRoute({
 });
 
 export const remove = createRoute({
-  path: "/tasks/{id}",
+  path: "/{id}",
   method: "delete",
   request: {
     params: IdParamsSchema,
